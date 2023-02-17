@@ -1,6 +1,7 @@
 # (c) Gerald_TM 2023
 # This is a program that allows you to create a receipt for a customer
 # it was made for a school assignment
+# 2/17/2023
 
 import configparser, tkinter as tk, mdutils, base64, datetime
 from tkinter import Variable, ttk, messagebox
