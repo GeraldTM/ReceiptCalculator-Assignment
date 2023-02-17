@@ -10,11 +10,13 @@ from tkinter import Variable, ttk, messagebox
 config = configparser.ConfigParser()
 config.read('conf.ini')
 
+# 
+
 # init tkinter
 app = tk.Tk()
 app.title("Sales Calculator")
 app.geometry("650x310")
-
+app.wm_resizable(False, False)
 # Set up the variables
 receiptVar = Variable()
 rawReceipt = list()
@@ -111,7 +113,7 @@ def printReceipt():
     receipt.new_line('')
     receipt.new_line('items purchased:')
     for item in rawReceipt:
-        receipt.new_line(item[0] + " x" + str(item[1]) + ": $" + str(round(float(item[2]))))
+        receipt.new_line(item[0] + " x" + str(item[1]) + ": $" + str(round(float(item[2]), 2)))
     receipt.new_line('Subtotal: $' + str(round(sum(costList), 2)))
     receipt.new_line('Tax: $' + str(round(sum(costList) * 0.13, 2)))
     receipt.new_line('Total: $' + str(round(sum(costList) * 1.13, 2)))
