@@ -1,0 +1,7 @@
+# Build and compile folders
+/dist/
+
+/build/
+
+#spec files
+/*.spec

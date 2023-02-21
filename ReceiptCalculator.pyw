@@ -136,7 +136,7 @@ receiptList.insert(0, "Products")
 
 nameInput.insert(0, "Name: ")
 
-# GUI Funtionality setup
+# GUI Functionality setup
 productsFrame.bind("<Configure>", lambda e: productsCanvas.configure(scrollregion=productsCanvas.bbox("all")))
 productsCanvas.create_window((0,0), window=productsFrame, anchor="nw")
 productsCanvas.configure(yscrollcommand=productScroll.set)
