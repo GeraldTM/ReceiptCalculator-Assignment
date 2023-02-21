@@ -181,7 +181,7 @@ while running:
     app.update()
     app.update_idletasks()
 
-#update stock
+# update stock
 for item in rawReceipt:
     config.set('Products', item[0].replace(' ','_'), (str(item[1])+","+str(item[3])))
 
